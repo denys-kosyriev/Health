@@ -1,0 +1,169 @@
+@import "variables";
+
+@media(any-hover: hover) {
+  .btn:hover, button:hover {
+    color: #fff;
+    background: $project-color;
+  }
+
+  a:hover {
+    color: $project-color;
+
+    svg, path {
+      fill: $project-color;
+    }
+  }
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Oxygen', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: white;
+  font-size: 16px;
+  color: #000;
+
+  &.burger-active {
+    header {
+      .header-links {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+main {
+  flex: 1 0 auto;
+  position: relative;
+}
+
+section {
+  position: relative;
+  padding: 10px 0;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+input, select {
+  transition: .3s linear;
+}
+
+.btn, button {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $text-color;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+  font-weight: 700;
+  transition: .3s linear;
+  padding: 16px 30px;
+}
+
+a:active, .btn:active, button:active {
+  opacity: .5;
+}
+
+img,
+svg,
+iframe,
+video {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-size: 30px;
+  color: $text-color;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: $text-color;
+}
+
+p {
+  color: $text-color;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1312px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media(min-width: 768px) {
+  h2 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+}
+
+@media(min-width: 1024px) {
+  body {
+    &.burger-active {
+      overflow: hidden;
+
+      header {
+        .burger {
+          div {
+            opacity: 0;
+          }
+
+          &::before {
+            transform: rotate(45deg);
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+  section {
+    padding: 30px 0;
+  }
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+

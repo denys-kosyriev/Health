@@ -1,0 +1,13 @@
+@media(any-hover: hover) {
+  .header {
+    .logo:hover {
+      opacity: .7;
+    }
+  }
+}
+
+.header {
+  .logo:active {
+    opacity: .5;
+  }
+}
