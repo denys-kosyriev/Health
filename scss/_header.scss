@@ -16,10 +16,7 @@
   z-index: 1000;
   padding: 16px 0;
   font-family: "Source Code Pro", sans-serif;
-
-  .container {
-    padding: 0 20px;
-  }
+  background: #fff;
 
   .content {
     display: flex;
@@ -53,7 +50,6 @@
   button {
     padding: 13px clamp(10px, 6%, 21px);
     color: #fff;
-    border-radius: 100px;
     font-size: 16px;
   }
 }

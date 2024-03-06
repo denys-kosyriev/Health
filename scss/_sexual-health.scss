@@ -1,9 +1,110 @@
-@media  (any-hover: hover) {
-  .sexual-health {
+@import "variables";
+@import "animations";
 
+@media (any-hover: hover) {
+  .sexual-health {
+    .meet {
+      .meet-close-btn:hover path {
+        fill: $red-color;
+      }
+
+      button:hover {
+        animation: horizontal-animation 2.4s linear infinite;
+      }
+    }
   }
 }
 
 .sexual-health {
+  padding-top: 76px;
 
+  .meet {
+    min-height: 179px;
+    background: $project-gradient;
+    padding: 20px 0;
+    text-align: center;
+    transition: .3s linear;
+    overflow: hidden;
+
+    &.close-meet {
+      height: 0;
+      min-height: 0;
+      padding: 0;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .meet-close-btn {
+      width: 20px;
+      position: absolute;
+      top: 15px;
+      right: 19px;
+      z-index: 1;
+      cursor: pointer;
+
+      path {
+        transition: .3s linear;
+      }
+
+      &:active {
+        opacity: .5;
+      }
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 0 10px;
+      margin: 0 auto 14px;
+
+      img {
+        width: 17px;
+      }
+
+      h3 {
+        color: #fff;
+        font-size: 18px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: #fff;
+      letter-spacing: -0.3px;
+      margin: 0 0 20px;
+    }
+
+    button {
+      min-width: 100%;
+      background: $white-btn-gradient;
+    }
+  }
+}
+
+@media(min-width: 400px) {
+  .sexual-health {
+    .meet {
+      button {
+        min-width: 216px;
+        letter-spacing: -1px;
+      }
+    }
+  }
+}
+
+@media(min-width: 1024px) {
+  .sexual-health {
+    .meet {
+      padding: 25px 0;
+
+      .meet-close-btn {
+        top: 21px;
+        right: 24px;
+      }
+    }
+  }
 }

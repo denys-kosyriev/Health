@@ -1,16 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-        // Change height header while scroll
-        const body = document.getElementsByTagName("body")[0];
+        // Close meet section
 
-        const handleScroll = () => {
-            if (window.scrollY < 60) {
-                body.classList.remove('scroll-top');
-            } else {
-                body.classList.add('scroll-top');
-            }
-        };
-        window.addEventListener("scroll", handleScroll);
+        const meet = document.getElementsByClassName("meet")[0];
+        const meetCloseBtn = document.getElementsByClassName("meet-close-btn")[0];
+
+        meetCloseBtn.addEventListener('click', () => {
+            meet.classList.add('close-meet');
+        })
 
     }
 )
