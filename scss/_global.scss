@@ -1,17 +1,12 @@
 @import "variables";
 
 @media(any-hover: hover) {
-  .btn:hover, button:hover {
-    color: #fff;
-    background: $project-color;
+  a:hover {
+    color: $red-text-color;
   }
 
-  a:hover {
-    color: $project-color;
-
-    svg, path {
-      fill: $project-color;
-    }
+  .btn:hover, button:hover {
+    background-position: right;
   }
 }
 
@@ -37,12 +32,9 @@ body {
   font-size: 16px;
   color: #000;
 
-  &.burger-active {
+  &.scroll-top {
     header {
-      .header-links {
-        width: 100%;
-        opacity: 1;
-      }
+      padding: 5px 0;
     }
   }
 }
@@ -69,18 +61,20 @@ input, select {
 }
 
 .btn, button {
-  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   color: $text-color;
-  font-size: 14px;
   cursor: pointer;
   user-select: none;
   line-height: 1;
   font-weight: 700;
-  transition: .3s linear;
   padding: 16px 30px;
+  border: 0;
+  font-size: 18px;
+  position: relative;
+  background: $green-btn-gradient-mobile left/200%;
+  transition: .3s linear;
 }
 
 a:active, .btn:active, button:active {
@@ -121,7 +115,7 @@ p {
 
 .container {
   width: 100%;
-  max-width: 1312px;
+  max-width: 1280px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -141,6 +135,8 @@ p {
       overflow: hidden;
 
       header {
+        padding: 20px 0;
+
         .burger {
           div {
             opacity: 0;
@@ -163,6 +159,10 @@ p {
   h2 {
     font-size: 32px;
     margin-bottom: 20px;
+  }
+  .btn, button {
+    font-size: 20px;
+    background: $blue-btn-gradient left/200%;
   }
 }
 

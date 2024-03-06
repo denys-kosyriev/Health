@@ -1,3 +1,5 @@
+@import "variables";
+
 @media(any-hover: hover) {
   .header {
     .logo:hover {
@@ -7,7 +9,79 @@
 }
 
 .header {
-  .logo:active {
-    opacity: .5;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  font-family: "Source Code Pro", sans-serif;
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 3%;
+  }
+
+  ul {
+    display: none;
+  }
+
+  li a {
+    font-size: 18px;
+  }
+
+  .logo {
+    cursor: pointer;
+    transition: .3s linear;
+    display: flex;
+
+    &:active {
+      opacity: .5;
+    }
+
+    img {
+      width: 44px;
+    }
+  }
+
+  button {
+    padding: 13px clamp(10px, 6%, 21px);
+    color: #fff;
+    border-radius: 100px;
+    font-size: 16px;
+  }
+}
+
+@media(min-width: 1024px) {
+  .header {
+    .content {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .logo {
+      img {
+        width: 41px;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex: 1 0 auto;
+      gap: 20px;
+      padding-right: 2.4%;
+    }
+
+    li a {
+      font-size: 20px;
+    }
   }
 }
