@@ -1,12 +1,23 @@
 @import "variables";
+@import "animations";
 
 @media(any-hover: hover) {
   a:hover {
     color: $red-color;
   }
 
-  .btn:hover, button:hover {
-    animation: horizontal-animation 2.4s linear infinite;
+  .btn:hover, button:hover, .meet-video .play-icon:hover {
+    animation: horizontal-animation 2.3s linear infinite;
+  }
+
+  .meet-video .play-icon:hover {
+    path {
+      fill: $green-color;
+    }
+
+    & ~ .text {
+      opacity: 0;
+    }
   }
 }
 
@@ -17,11 +28,18 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
   width: 100%;
-  font-family: 'Oxygen', sans-serif;
+
+  &.modal-active {
+    overflow: hidden;
+  }
 }
 
 body {
@@ -31,11 +49,20 @@ body {
   background: white;
   font-size: 16px;
   color: #000;
+  font-family: 'Oxygen', sans-serif;
+
+  &.scroll-top {
+    header {
+      box-shadow: 5px 0 10px #c7c7c7;
+      padding: 5px 0;
+    }
+  }
 }
 
 main {
   flex: 1 0 auto;
   position: relative;
+  padding-top: 76px;
 }
 
 section {
@@ -116,6 +143,138 @@ p {
   position: relative;
 }
 
+.red {
+  color: $red-color;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.meet-video {
+  height: 52vw;
+  max-height: 348px;
+  width: 100%;
+  max-width: 610px;
+  position: relative;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 1px;
+
+  #video {
+    height: 60vw;
+    max-height: 363px;
+    width: 100%;
+  }
+
+  &.play-video img, &.play-video .play-icon, &.play-video .text {
+    display: none;
+  }
+
+  .mejs__container {
+    border-radius: 24px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mejs__controls {
+    display: none;
+  }
+
+  .on-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .play-icon {
+    width: 71px;
+    height: 71px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    padding-left: 2px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border-radius: 50%;
+    background: $blue-btn-gradient;
+    transition: .3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:active {
+      opacity: .5;
+    }
+
+    svg {
+      width: 29px;
+      height: 29px;
+    }
+
+    path {
+      fill: #fff;
+      transition: .3s linear;
+    }
+  }
+
+  .text {
+    max-width: 94%;
+    width: 100%;
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    z-index: 3;
+    transform: translateX(-50%);
+    text-align: center;
+    transition: .3s linear;
+
+    p {
+      display: inline-block;
+      font-size: 12px;
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 6px;
+      background: rgba(31, 31, 31, .5);
+    }
+  }
+}
+
+.comment {
+  display: flex;
+  align-items: start;
+  gap: 0 10px;
+  padding: 18px 16px;
+  background: #F6F8F9;
+  border-radius: 20px;
+
+  img {
+    width: 44px;
+    object-fit: contain;
+  }
+
+  h4 {
+    background: $project-gradient;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
 @media(min-width: 768px) {
   h2 {
     font-size: 35px;
@@ -126,29 +285,6 @@ p {
 }
 
 @media(min-width: 1024px) {
-  body {
-    &.burger-active {
-      overflow: hidden;
-
-      header {
-        padding: 20px 0;
-
-        .burger {
-          div {
-            opacity: 0;
-          }
-
-          &::before {
-            transform: rotate(45deg);
-          }
-
-          &::after {
-            transform: rotate(-45deg);
-          }
-        }
-      }
-    }
-  }
   section {
     padding: 30px 0;
   }
@@ -158,6 +294,44 @@ p {
   .btn, button {
     font-size: 20px;
     background: $blue-btn-gradient;
+  }
+  .meet-video {
+    position: absolute;
+    top: 17px;
+    right: 21px;
+    z-index: 1;
+
+    .play-icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    .text {
+      bottom: 14px;
+
+      p {
+        font-size: 18px;
+        padding: 8px 18px;
+      }
+    }
+  }
+
+  .comment {
+    border-radius: 24px;
+    padding: 24px;
+    gap: 0 17px;
+
+    img {
+      width: 64px;
+    }
+
+    h4 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 16px;
+    }
   }
 }
 
