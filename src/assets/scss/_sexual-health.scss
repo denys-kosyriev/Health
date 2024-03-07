@@ -11,16 +11,13 @@
 }
 
 .sexual-health {
-
   .meet {
     padding: 0 0 56px;
-
     &.close-meet {
       .top {
         height: 0;
         min-height: 0;
         padding: 0;
-
         .meet-close-btn {
           opacity: 0;
         }
@@ -32,9 +29,8 @@
       background: $project-gradient;
       padding: 20px 0;
       text-align: center;
-      transition: .3s linear;
+      transition: 0.3s linear;
       overflow: hidden;
-
       .meet-close-btn {
         width: 20px;
         position: absolute;
@@ -42,54 +38,43 @@
         right: 19px;
         z-index: 1;
         cursor: pointer;
-
         path {
-          transition: .3s linear;
+          transition: 0.3s linear;
         }
-
         &:active {
-          opacity: .5;
+          opacity: 0.5;
         }
       }
-
       .content {
         display: flex;
         flex-direction: column;
         align-items: center;
       }
-
-
       .title {
         display: flex;
         align-items: center;
         gap: 0 10px;
         margin: 0 auto 14px;
-
         img {
           width: 17px;
         }
-
         h3 {
           color: #fff;
           font-size: 18px;
         }
       }
-
       p {
         font-size: 14px;
         color: #fff;
         margin: 0 0 20px;
       }
-
       button {
         min-width: 100%;
         background: $white-btn-gradient;
       }
     }
-
     .bottom {
       padding: 19px 0 0;
-
       h1 {
         margin-bottom: 10px;
         font-size: 32px;
@@ -97,7 +82,6 @@
         line-height: 1.2;
         letter-spacing: 0.2px;
       }
-
       .desc {
         font-size: 18px;
         margin-bottom: 20px;
@@ -107,7 +91,7 @@
   }
 }
 
-@media(min-width: 400px) {
+@media (min-width: 400px) {
   .sexual-health {
     .meet {
       .top {
@@ -120,35 +104,28 @@
   }
 }
 
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
   .sexual-health {
     .meet {
       padding: 0 0 68px;
-
       .meet-close-btn {
         top: 21px;
         right: 24px;
       }
-
       .top {
         padding: 25px 0;
       }
-
       .bottom {
         min-height: 500px;
         padding: 68px 0 0;
-
         .content {
           width: 48%;
         }
-
         h1 {
           font-size: 54px;
         }
-
         .desc {
           margin-bottom: 37px;
-
         }
       }
     }
