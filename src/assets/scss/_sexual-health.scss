@@ -3,8 +3,8 @@
 @media (any-hover: hover) {
   .sexual-health {
     .meet {
-      .meet-close-btn:hover path {
-        fill: $color1;
+      .meet-close-btn:hover {
+        transform: rotate(45deg);
       }
     }
   }
@@ -12,7 +12,7 @@
 
 .sexual-health {
   .meet {
-    padding: 0 0 56px;
+    padding: 0 0 40px;
     &.close-meet {
       .top {
         height: 0;
@@ -23,7 +23,6 @@
         }
       }
     }
-
     .top {
       min-height: 179px;
       background: $project-gradient;
@@ -38,9 +37,7 @@
         right: 19px;
         z-index: 1;
         cursor: pointer;
-        path {
-          transition: 0.3s linear;
-        }
+        transition: 0.3s linear;
         &:active {
           opacity: 0.5;
         }
@@ -54,7 +51,7 @@
         display: flex;
         align-items: center;
         gap: 0 10px;
-        margin: 0 auto 14px;
+        margin: 0 auto 13px;
         img {
           width: 17px;
         }
@@ -66,7 +63,7 @@
       p {
         font-size: 14px;
         color: #fff;
-        margin: 0 0 20px;
+        margin: 0 0 17px;
       }
       button {
         min-width: 100%;
@@ -90,6 +87,50 @@
       }
     }
   }
+  .results {
+    background: #e6f3fb;
+    padding: 39px 0 20px;
+    h4 {
+      font-size: 16px;
+      background: $project-gradient;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 9px;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-bottom: 80px;
+    }
+    li {
+      width: 100%;
+      background: #fff;
+      border-radius: 20px;
+      padding: 19px;
+      div {
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+        img {
+          width: 27px;
+        }
+        h3 {
+          color: $color1;
+          line-height: 1.2;
+        }
+      }
+      .bottom-title {
+        margin-bottom: 5px;
+      }
+    }
+    #chart-container {
+      position: relative;
+      height: 500px;
+      overflow: hidden;
+    }
+  }
 }
 
 @media (min-width: 400px) {
@@ -105,10 +146,26 @@
   }
 }
 
+@media (min-width: 567px) {
+  .sexual-health {
+    .results {
+      ul {
+        margin-bottom: 40px;
+      }
+      li {
+        width: 48%;
+      }
+    }
+  }
+}
+
 @media (min-width: 1024px) {
   .sexual-health {
     .meet {
-      padding: 0 0 68px;
+      padding: 0 0 58px;
+      .meet-video {
+        width: 48%;
+      }
       .meet-close-btn {
         top: 21px;
         right: 24px;
@@ -117,7 +174,7 @@
         padding: 25px 0;
       }
       .bottom {
-        min-height: 500px;
+        min-height: 460px;
         padding: 68px 0 0;
         .content {
           width: 48%;
@@ -127,6 +184,25 @@
         }
         .desc {
           margin-bottom: 37px;
+        }
+      }
+    }
+    .results {
+      padding: 69px 0 20px;
+      h2 {
+        margin-bottom: 25px;
+      }
+      h4 {
+        font-size: 18px;
+      }
+      li {
+        width: 24%;
+        padding: 24px 17px;
+        .bottom-title {
+          margin-bottom: 12px;
+        }
+        p {
+          line-height: 1.3;
         }
       }
     }
