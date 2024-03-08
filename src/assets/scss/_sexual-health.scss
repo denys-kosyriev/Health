@@ -4,7 +4,7 @@
   .sexual-health {
     .meet {
       .meet-close-btn:hover path {
-        fill: $red-color;
+        fill: $color1;
       }
     }
   }
@@ -70,7 +70,8 @@
       }
       button {
         min-width: 100%;
-        background: $white-btn-gradient;
+        background: $light-btn-gradient;
+        color: $text-color;
       }
     }
     .bottom {

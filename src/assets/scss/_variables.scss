@@ -1,8 +1,8 @@
 $text-color: #1f1f1f;
-$red-color: #ff3e3e;
-$green-color: #7ecd19;
+$color1: #ff3e3e;
+$color2: #7ecd19;
 $project-gradient: linear-gradient(to right, #0686d8, #003e7c);
-$blue-btn-gradient: linear-gradient(
+$btn-gradient-desktop: linear-gradient(
     to right,
     #0686d8,
     #003e7c,
@@ -11,9 +11,9 @@ $blue-btn-gradient: linear-gradient(
     #003e7c
   )
   left/400%;
-$green-btn-gradient-mobile: linear-gradient(to right, #7ecd19, #38b000, #7ecd19)
+$btn-gradient-mobile: linear-gradient(to right, #7ecd19, #38b000, #7ecd19)
   left/400%;
-$white-btn-gradient: linear-gradient(
+$light-btn-gradient: linear-gradient(
     to right,
     #fff,
     #fff,

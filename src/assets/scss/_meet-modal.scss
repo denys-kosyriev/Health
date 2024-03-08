@@ -1,0 +1,64 @@
+@import "variables";
+
+.meet-modal {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0.4s linear,
+    opacity 0.4s linear;
+  .container {
+    max-width: 560px;
+  }
+  .meet-modal-content {
+    margin: 85px 0 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    scale: 0;
+    transition: 0.4s linear;
+  }
+  .meet-video {
+    max-height: 320px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transform: translate(0);
+    margin: 0;
+    overflow: visible;
+  }
+  .bottom {
+    background: #fff;
+    padding: 23px 15px 20px;
+  }
+  button {
+    width: 96%;
+    margin: 0 auto 16px;
+    background: $btn-gradient-mobile;
+  }
+  .meet-comment {
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .meet-modal {
+    .meet-modal-content {
+      margin: 100px 0 40px;
+    }
+    button {
+      background: $btn-gradient-desktop;
+    }
+  }
+}
