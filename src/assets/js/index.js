@@ -24,16 +24,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const meetVideo = document.getElementsByClassName("meet-video");
   const playIcon = document.getElementsByClassName("play-icon");
-  let video = document.getElementById("video");
+  const video = document.getElementsByClassName("video");
 
-  let playVideo = new MediaElementPlayer(video, {
-    success: function (mediaElement, originalNode) {},
-  });
+  const playVideoFun = (i) => {
+    let playVideo = new MediaElementPlayer(video[i], {
+      success: function (mediaElement, originalNode) {},
+    });
+    playVideo.play();
+  };
 
   for (let i = 0; i < playIcon.length; i++) {
     playIcon[i].addEventListener("click", () => {
-      playVideo.play();
       meetVideo[i].classList.add("play-video");
+      playVideoFun(i);
     });
   }
 
@@ -41,8 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const showModalBtn = document.getElementsByClassName("show-modal-btn")[0];
   const meetModal = document.getElementsByClassName("meet-modal")[0];
-  const meetModalContent = document.getElementsByClassName("meet-modal-content")[0];
-  console.log(showModalBtn)
+  const meetModalContent =
+    document.getElementsByClassName("meet-modal-content")[0];
+
   showModalBtn.addEventListener("click", () => {
     body.classList.add("show-modal");
   });
