@@ -17,6 +17,15 @@
         }
       }
     }
+    #lifestyle {
+      li:hover {
+        background: rgba(249, 249, 249, 0.1);
+      }
+      li div:hover {
+        color: $color1;
+        border-color: $color1;
+      }
+    }
   }
 }
 
@@ -227,7 +236,7 @@
     }
   }
   .experts {
-    padding: 40px 0;
+    padding: 40px 0 20px;
     h3 {
       max-width: 500px;
     }
@@ -240,8 +249,8 @@
     .swiper-buttons {
       display: flex;
       align-items: center;
-      gap: 0 22px;
-      margin: 16px 10px 0 0;
+      gap: 0 12px;
+      margin: 16px 0 0 0;
       div {
         display: flex;
       }
@@ -292,6 +301,49 @@
           font-weight: 400;
           display: block;
         }
+      }
+    }
+  }
+  #lifestyle {
+    padding: 20px 0;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 2%;
+    }
+    li {
+      width: 48%;
+      padding: 30px 20px;
+      text-align: center;
+      position: relative;
+      border-radius: 20px;
+      border: 1px solid #eaeaea;
+      transition: 0.3s linear;
+      div {
+        width: 14px;
+        height: 14px;
+        font-size: 10px;
+        position: absolute;
+        top: 11px;
+        right: 9px;
+        z-index: 1;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ccc;
+        cursor: pointer;
+        transition: 0.3s linear;
+      }
+      img {
+        width: 30px;
+        margin-bottom: 13px;
+      }
+      h4 {
+        margin-bottom: 2px;
+        display: block;
       }
     }
   }
@@ -355,6 +407,15 @@
         }
         p:last-of-type {
           text-align: start;
+        }
+      }
+      #lifestyle {
+        li {
+          width: 48%;
+          div {
+            top: 18px;
+            right: 11px;
+          }
         }
       }
     }
@@ -464,7 +525,7 @@
       }
     }
     .experts {
-      padding: 60px 0;
+      padding: 60px 0 25px;
       h2 {
         margin-bottom: 33px;
       }
@@ -503,6 +564,23 @@
         padding: 14px 15px 11px 15px;
         img {
           width: 21px;
+        }
+      }
+    }
+    #lifestyle {
+      padding: 27px 0 30px;
+      li {
+        width: 23%;
+        padding: 25px 20px;
+        img {
+          width: 50px;
+          margin-bottom: 20px;
+        }
+        h4 {
+          font-size: 24px;
+        }
+        h3 {
+          font-size: 40px;
         }
       }
     }
