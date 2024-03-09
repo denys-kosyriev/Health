@@ -87,9 +87,9 @@
       }
     }
   }
-  .results {
+  #results {
     background: #e6f3fb;
-    padding: 39px 0 20px;
+    padding: 39px 0 40px;
     h4 {
       font-size: 16px;
       background: $project-gradient;
@@ -130,6 +130,9 @@
       height: 500px;
       overflow: hidden;
     }
+    #age-bracket {
+      padding: 40px 0 20px;
+    }
   }
 }
 
@@ -148,13 +151,14 @@
 
 @media (min-width: 567px) {
   .sexual-health {
-    .results {
-      ul {
-        margin-bottom: 40px;
-      }
+    #results {
+      padding: 20px 0 30px;
       li {
         width: 48%;
       }
+    }
+    #age-bracket {
+      padding: 20px 0 0;
     }
   }
 }
@@ -187,7 +191,7 @@
         }
       }
     }
-    .results {
+    #results {
       padding: 69px 0 20px;
       h2 {
         margin-bottom: 25px;
