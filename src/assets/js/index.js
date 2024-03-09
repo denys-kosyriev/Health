@@ -57,4 +57,21 @@ document.addEventListener("DOMContentLoaded", function () {
       body.classList.remove("show-modal");
     }
   });
+
+  // Work swiper-experts
+
+  const swiperCustom = new Swiper(".swiper-experts", {
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    navigation: {
+      prevEl: ".experts-swiper-btn-prev",
+      nextEl: ".experts-swiper-btn-next",
+    },
+    breakpoints: {
+      1024: {
+        spaceBetween: 16,
+      },
+    },
+  });
 });
