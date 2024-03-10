@@ -289,6 +289,13 @@ p {
     }
   }
 }
+.swiper-wrapper {
+  cursor: pointer;
+}
+.swiper {
+  padding-right: 20px;
+  padding-left: 20px;
+}
 
 @media (min-width: 768px) {
   h2 {
@@ -354,5 +361,12 @@ p {
     .swiper-buttons {
       gap: 13px;
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .swiper {
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }

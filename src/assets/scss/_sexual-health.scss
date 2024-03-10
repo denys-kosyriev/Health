@@ -26,6 +26,13 @@
         border-color: $color1;
       }
     }
+    .medical-experts {
+      .swiper-slide:hover {
+        .photo img {
+          scale: 1.1;
+        }
+      }
+    }
   }
 }
 
@@ -238,7 +245,7 @@
   .experts {
     padding: 40px 0 20px;
     .swiper {
-      padding: 0 20px 30px;
+      padding-bottom: 30px;
     }
     .swiper-slide {
       max-width: 300px;
@@ -326,7 +333,7 @@
   }
   .risk {
     .swiper {
-      padding: 0 20px 30px;
+      padding-bottom: 20px;
     }
     .swiper-slide {
       height: auto;
@@ -339,6 +346,55 @@
       }
       h3 {
         margin-bottom: 7px;
+      }
+    }
+  }
+  .medical-experts {
+    padding: 61px 0 40px;
+    .swiper {
+      padding-bottom: 33px;
+    }
+    h2 {
+      font-size: 35px;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin-bottom: 10px;
+      span {
+        color: #0686d8;
+      }
+    }
+    .desc {
+      font-size: 18px;
+      margin-bottom: 21px;
+    }
+    .swiper-slide {
+      width: 270px;
+      border-radius: 20px;
+      .photo-mob {
+        height: 350px;
+        border-radius: 16px;
+        object-fit: cover;
+        margin-bottom: 18px;
+      }
+      .photo {
+        display: none;
+        height: 300px;
+        img {
+          object-fit: cover;
+          height: 100%;
+          transition: 0.3s linear;
+        }
+      }
+      h3 {
+        font-size: 24px;
+        margin-bottom: 1px;
+      }
+      p:first-of-type {
+        margin-bottom: 8px;
+      }
+      p:last-of-type {
+        font-size: 18px;
+        line-height: 1.3;
       }
     }
   }
@@ -448,6 +504,44 @@
           letter-spacing: -0.4px;
         }
       }
+      .medical-experts {
+        padding: 24px 0 50px;
+        h2 {
+          letter-spacing: 0.1px;
+        }
+        .desc {
+          margin-bottom: 30px;
+        }
+        .swiper {
+          padding-bottom: 33px;
+        }
+        .swiper-slide {
+          width: 407px;
+          border: 1px solid #eaeaea;
+          border-radius: 24px;
+          overflow: hidden;
+          .photo-mob {
+            display: none;
+          }
+          .photo {
+            display: block;
+          }
+          .bottom {
+            padding: 21px;
+          }
+          h3 {
+            font-size: 32px;
+            margin-bottom: 6px;
+          }
+          p:first-of-type {
+            margin-bottom: 23px;
+          }
+          p:last-of-type {
+            font-size: 16px;
+            line-height: 1.4;
+          }
+        }
+      }
     }
   }
 }
@@ -522,7 +616,7 @@
     .experts {
       padding: 60px 0 25px;
       .swiper {
-        padding: 0 100px 30px;
+        padding-bottom: 30px;
       }
       .swiper-slide {
         max-width: 404px;
@@ -539,8 +633,11 @@
       }
     }
     .risk {
+      .swiper-top {
+        margin-bottom: 27px;
+      }
       .swiper {
-        padding: 0 100px 30px;
+        padding-bottom: 30px;
       }
       .swiper-slide {
         img {

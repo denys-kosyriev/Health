@@ -93,4 +93,16 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+
+  // Work swiper-medical-experts
+
+  const swiperMedicalExperts = new Swiper(".swiper-medical-experts", {
+    slidesPerView: "auto",
+    spaceBetween: 12,
+    breakpoints: {
+      1024: {
+        spaceBetween: 16,
+      },
+    },
+  });
 });
