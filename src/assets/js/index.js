@@ -105,4 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+
+  // Show current year
+
+  const currentYear = new Date();
+  let year = document.getElementsByClassName("year")[0];
+
+  year.innerHTML = currentYear.getFullYear();
 });
