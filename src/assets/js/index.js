@@ -74,4 +74,23 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+
+  // // Work swiper-risk
+
+  const swiperRisk = new Swiper(".swiper-risk", {
+    slidesPerView: "1",
+    spaceBetween: 16,
+    navigation: {
+      prevEl: ".risk-swiper-btn-prev",
+      nextEl: ".risk-swiper-btn-next",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: "2",
+      },
+      1024: {
+        slidesPerView: "3",
+      },
+    },
+  });
 });

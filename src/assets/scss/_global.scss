@@ -139,7 +139,7 @@ p {
   margin: 0 auto;
   position: relative;
 }
-.red {
+.color1 {
   color: $color1;
 }
 .bold {
@@ -255,6 +255,40 @@ p {
     line-height: 1.3;
   }
 }
+.swiper-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 20px;
+  margin-bottom: 20px;
+  h2 {
+    max-width: 800px;
+    margin: 0;
+  }
+  .swiper-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0 12px;
+    div {
+      display: flex;
+    }
+    .swiper-btn-prev,
+    .swiper-btn-next {
+      cursor: pointer;
+      padding: 10px;
+      path {
+        fill: #003e7c;
+        transition: 0.3s linear;
+      }
+    }
+    .swiper-btn-prev {
+      transform: rotate(180deg);
+    }
+    svg {
+      width: 9px;
+    }
+  }
+}
 
 @media (min-width: 768px) {
   h2 {
@@ -313,6 +347,12 @@ p {
         font-size: 18px;
         padding: 8px 18px;
       }
+    }
+  }
+  .swiper-top {
+    margin-bottom: 33px;
+    .swiper-buttons {
+      gap: 13px;
     }
   }
 }
