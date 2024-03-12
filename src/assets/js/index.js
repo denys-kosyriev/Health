@@ -112,4 +112,36 @@ document.addEventListener("DOMContentLoaded", function () {
   let year = document.getElementsByClassName("year")[0];
 
   year.innerHTML = currentYear.getFullYear();
+
+  // Work stopwatch in header
+
+  const min = document.getElementsByClassName("min")[0];
+  const sec = document.getElementsByClassName("sec")[0];
+  let time = 600;
+  let stopwatchTriggered = false;
+
+  function onScrollToSection() {
+    const stopwatch = setInterval(() => {
+      if (time >= 0) {
+        let minutes = Math.floor(time / 60);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        let seconds = time % 60;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        min.innerHTML = `${minutes}`;
+        sec.innerHTML = `${seconds}`;
+        time--;
+      } else {
+        clearInterval(stopwatch);
+      }
+    }, 1000);
+  }
+
+  window.addEventListener("scroll", function () {
+    let stopwatch = document.getElementsByClassName("stopwatch")[0]; // Замініть 'your-section-id' на ID вашої секції
+    let position = stopwatch.getBoundingClientRect().y;
+    if (position < window.innerHeight && !stopwatchTriggered) {
+      stopwatchTriggered = true;
+      onScrollToSection();
+    }
+  });
 });

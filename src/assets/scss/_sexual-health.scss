@@ -51,7 +51,7 @@
     }
     .top {
       min-height: 179px;
-      background: $project-gradient;
+      background: linear-gradient(to right, $project-color1, $project-color2);
       padding: 20px 0;
       text-align: center;
       transition: 0.3s linear;
@@ -118,7 +118,7 @@
     padding: 39px 0 40px;
     h4 {
       font-size: 16px;
-      background: $project-gradient;
+      background: linear-gradient(to right, $project-color1, $project-color2);
       -webkit-background-clip: text;
       color: transparent;
       margin-bottom: 9px;
@@ -379,6 +379,7 @@
       .photo {
         display: none;
         height: 300px;
+        overflow: hidden;
         img {
           object-fit: cover;
           height: 100%;
@@ -396,6 +397,74 @@
         font-size: 18px;
         line-height: 1.3;
       }
+    }
+  }
+  .discount {
+    text-align: center;
+    padding: 0;
+    margin-bottom: -1px;
+    .container {
+      padding: 0;
+    }
+    .tech-img {
+      position: relative;
+      background: #0577c5;
+      padding: 30px 20px 0;
+      margin-bottom: -1px;
+      img {
+        height: 252px;
+        object-fit: contain;
+        object-position: bottom;
+      }
+      &::after {
+        content: "";
+        width: 100%;
+        height: 13%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        background: linear-gradient(to top, #0577c5, #0577c5, rgba(0, 0, 0, 0));
+      }
+    }
+    .wrapper {
+      padding: 0 20px 30px;
+      background: linear-gradient(to bottom, #0577c5, $project-color2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .label {
+      min-width: 158px;
+      padding: 9px;
+      align-items: center;
+      border-radius: 100px;
+      margin-bottom: 6px;
+      background: #fff;
+    }
+    h4 {
+      font-size: 14px;
+      color: transparent;
+      background: linear-gradient(to right, $project-color1, $project-color2);
+      -webkit-background-clip: text;
+      line-height: 1;
+    }
+    h3 {
+      color: #fff;
+      margin-bottom: 11px;
+    }
+    p {
+      color: #fff;
+      &:first-of-type {
+        max-width: 68%;
+        font-size: 18px;
+        margin-bottom: 24px;
+      }
+    }
+    button {
+      min-width: 100%;
+      background: $btn-gradient-mobile;
+      margin-bottom: 9px;
     }
   }
 }
@@ -433,114 +502,182 @@
         min-width: 296px;
       }
     }
+    .discount {
+      button {
+        min-width: 231px;
+      }
+    }
   }
+}
 
-  @media (min-width: 567px) {
-    .sexual-health {
-      #results {
-        padding: 20px 0 30px;
-        li {
-          width: 48%;
-        }
+@media (min-width: 567px) {
+  .sexual-health {
+    #results {
+      padding: 20px 0 30px;
+      li {
+        width: 48%;
       }
-      #age-bracket {
-        padding: 20px 0 0;
+    }
+    #age-bracket {
+      padding: 20px 0 0;
+    }
+    #latest-tech {
+      h3 {
+        width: 71%;
+        position: absolute;
+        top: 25vw;
+        left: 20px;
       }
-      #latest-tech {
-        h3 {
-          width: 71%;
-          position: absolute;
-          top: 25vw;
-          left: 20px;
-        }
-        button {
-          margin: 0 0 20px;
-        }
-        p:last-of-type {
-          text-align: start;
-        }
+      button {
+        margin: 0 0 20px;
       }
-      #lifestyle {
-        li {
-          width: 48%;
-          div {
-            top: 18px;
-            right: 11px;
-          }
+      p:last-of-type {
+        text-align: start;
+      }
+    }
+    #lifestyle {
+      li {
+        width: 48%;
+        div {
+          top: 18px;
+          right: 11px;
         }
       }
     }
   }
+}
 
-  @media (min-width: 768px) {
-    .sexual-health {
-      #latest-tech {
-        .back-desk {
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: -1;
-          border-radius: 20px;
-          object-fit: cover;
+@media (min-width: 768px) {
+  .sexual-health {
+    #latest-tech {
+      .back-desk {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+      .window {
+        top: 10px;
+        right: 1%;
+      }
+      .content {
+        width: 62%;
+        background: transparent;
+        position: relative;
+        padding: 40px 20px 40px;
+      }
+      h3 {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+      p:first-of-type {
+        letter-spacing: -0.4px;
+      }
+    }
+    .medical-experts {
+      padding: 24px 0 50px;
+      h2 {
+        letter-spacing: 0.1px;
+      }
+      .desc {
+        margin-bottom: 30px;
+      }
+      .swiper {
+        padding-bottom: 33px;
+      }
+      .swiper-slide {
+        width: 405px;
+        border: 1px solid #eaeaea;
+        border-radius: 24px;
+        overflow: hidden;
+        .photo-mob {
+          display: none;
         }
-        .window {
-          top: 10px;
-          right: 1%;
+        .photo {
+          display: block;
         }
-        .content {
-          width: 62%;
-          background: transparent;
-          position: relative;
-          padding: 40px 20px 40px;
+        .bottom {
+          padding: 21px;
         }
         h3 {
-          width: 100%;
-          position: relative;
-          top: 0;
-          left: 0;
+          font-size: 32px;
+          margin-bottom: 6px;
         }
         p:first-of-type {
-          letter-spacing: -0.4px;
+          margin-bottom: 23px;
+        }
+        p:last-of-type {
+          font-size: 16px;
+          line-height: 1.4;
         }
       }
-      .medical-experts {
-        padding: 24px 0 50px;
-        h2 {
-          letter-spacing: 0.1px;
+    }
+    .discount {
+      text-align: start;
+      margin-bottom: 70px;
+      .container {
+        padding: 0 20px;
+      }
+      .content {
+        border-radius: 24px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 20px;
+        background: linear-gradient(to right, $project-color1, $project-color2);
+        padding: 68px 4% 0;
+      }
+      .tech-img {
+        background: transparent;
+        padding: 0;
+        &::after {
+          display: none;
         }
-        .desc {
-          margin-bottom: 30px;
+        img {
+          height: 385px;
+          margin-bottom: -4px;
         }
-        .swiper {
-          padding-bottom: 33px;
+      }
+      .wrapper {
+        width: 58.7%;
+        background: transparent;
+        margin-bottom: auto;
+        align-items: start;
+        padding: 0 0 30px;
+      }
+      .label {
+        min-width: 150px;
+        padding: 7px 10px;
+        text-align: center;
+        margin-bottom: 18px;
+      }
+      h4 {
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 43px;
+        margin-bottom: 9px;
+      }
+      p {
+        &:first-of-type {
+          max-width: 100%;
+          font-size: 24px;
+          letter-spacing: -0.1px;
+          margin-bottom: 31px;
         }
-        .swiper-slide {
-          width: 407px;
-          border: 1px solid #eaeaea;
-          border-radius: 24px;
-          overflow: hidden;
-          .photo-mob {
-            display: none;
-          }
-          .photo {
-            display: block;
-          }
-          .bottom {
-            padding: 21px;
-          }
-          h3 {
-            font-size: 32px;
-            margin-bottom: 6px;
-          }
-          p:first-of-type {
-            margin-bottom: 23px;
-          }
-          p:last-of-type {
-            font-size: 16px;
-            line-height: 1.4;
-          }
+        &:last-of-type {
+          font-size: 18px;
         }
+      }
+      button {
+        background: $light-btn-gradient;
+        color: $text-color;
       }
     }
   }
