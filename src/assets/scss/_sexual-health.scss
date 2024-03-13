@@ -7,7 +7,7 @@
         transform: rotate(45deg);
       }
     }
-    .experts {
+    #experts {
     }
     #lifestyle {
       li:hover {
@@ -150,7 +150,7 @@
       padding: 40px 0 20px;
     }
   }
-  .age-bracket {
+  #age-bracket {
     padding: 40px 0 23px;
     background: #e6f3fb;
     .content {
@@ -365,8 +365,11 @@
       text-align: center;
     }
   }
-  .experts {
+  #experts {
     padding: 40px 0 18px;
+    .content {
+      display: flex;
+    }
     .swiper {
       padding-bottom: 32px;
     }
@@ -454,7 +457,7 @@
       }
     }
   }
-  .risk {
+  #risk {
     padding: 21px 0 38px;
     .swiper {
       padding-bottom: 25px;
@@ -475,6 +478,9 @@
   }
   .medical-experts {
     padding: 38px 0 36px;
+    .content {
+      display: flex;
+    }
     .swiper {
       padding-bottom: 38px;
     }
@@ -678,7 +684,7 @@
     #results {
       padding: 69px 0 20px;
     }
-    .age-bracket {
+    #age-bracket {
       padding: 20px 0 68px;
       .content {
         padding: 39px 41px 37px;
@@ -759,13 +765,17 @@
         letter-spacing: -0.4px;
       }
     }
-    .experts {
+    #experts {
       padding: 31px 0 28px;
     }
     #lifestyle {
       padding: 20px 0 29px;
+      li div {
+        width: 18px;
+        height: 18px;
+      }
     }
-    .risk {
+    #risk {
       padding: 30px 0 28px;
     }
     .medical-experts {
@@ -940,7 +950,7 @@
         color: $text-color;
       }
     }
-    .experts {
+    #experts {
       .swiper {
         padding-bottom: 26px;
       }
@@ -958,7 +968,7 @@
         }
       }
     }
-    .risk {
+    #risk {
       .slider-top {
         margin-bottom: 27px;
       }

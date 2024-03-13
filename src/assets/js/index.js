@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Work swiper-experts
 
   const swiperCustom = new Swiper(".swiper-experts", {
-    loop: true,
     slidesPerView: "auto",
     spaceBetween: 20,
     navigation: {
