@@ -8,14 +8,6 @@
       }
     }
     .experts {
-      .swiper-buttons {
-        .swiper-btn-prev:hover,
-        .swiper-btn-next:hover {
-          path {
-            fill: $color1;
-          }
-        }
-      }
     }
     #lifestyle {
       li:hover {
@@ -38,7 +30,7 @@
 
 .sexual-health {
   .meet {
-    padding: 0 0 40px;
+    padding: 0 0 36px;
     &.close-meet {
       .top {
         height: 0;
@@ -128,7 +120,6 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 13px;
-      margin-bottom: 80px;
     }
     li {
       width: 100%;
@@ -147,7 +138,7 @@
         }
       }
       .bottom-title {
-        margin-bottom: 5px;
+        margin-bottom: 7px;
       }
     }
     #chart-container {
@@ -160,6 +151,7 @@
     }
   }
   .age-bracket {
+    padding: 40px 0 23px;
     background: #e6f3fb;
     .content {
       background: #fff;
@@ -367,7 +359,6 @@
     }
     button {
       min-width: 100%;
-      background: $btn-gradient-mobile;
       margin: 0 auto 6px;
     }
     p:last-of-type {
@@ -375,9 +366,9 @@
     }
   }
   .experts {
-    padding: 40px 0 20px;
+    padding: 40px 0 18px;
     .swiper {
-      padding-bottom: 30px;
+      padding-bottom: 32px;
     }
     .swiper-slide {
       max-width: 300px;
@@ -411,7 +402,7 @@
     }
   }
   #lifestyle {
-    padding: 20px 0;
+    padding: 19px 0 21px;
     ul {
       display: flex;
       flex-wrap: wrap;
@@ -464,8 +455,9 @@
     }
   }
   .risk {
+    padding: 21px 0 38px;
     .swiper {
-      padding-bottom: 20px;
+      padding-bottom: 25px;
     }
     .swiper-slide {
       height: auto;
@@ -482,9 +474,9 @@
     }
   }
   .medical-experts {
-    padding: 61px 0 40px;
+    padding: 38px 0 36px;
     .swiper {
-      padding-bottom: 33px;
+      padding-bottom: 38px;
     }
     h2 {
       font-size: 35px;
@@ -595,7 +587,6 @@
     }
     button {
       min-width: 100%;
-      background: $btn-gradient-mobile;
       margin-bottom: 9px;
     }
   }
@@ -681,7 +672,64 @@
 
 @media (min-width: 768px) {
   .sexual-health {
+    .meet {
+      padding: 0 0 58px;
+    }
+    #results {
+      padding: 69px 0 20px;
+    }
+    .age-bracket {
+      padding: 20px 0 68px;
+      .content {
+        padding: 39px 41px 37px;
+      }
+      .increase {
+        margin: -9px 0 7px;
+      }
+      .true-age {
+        width: 25px;
+        height: 25px;
+        border-width: 5px;
+        top: 42%;
+        right: calc(29% + 15px);
+        div {
+          &::before {
+            top: -41px;
+          }
+          &::after {
+            font-size: 18px;
+            top: -91px;
+          }
+        }
+      }
+      .age {
+        &:first-of-type {
+          left: 4%;
+        }
+        &:nth-of-type(2) {
+          left: 29%;
+        }
+      }
+      .desc {
+        padding: 0;
+        text-align: center;
+        gap: 16%;
+        p {
+          width: 11%;
+          &:first-of-type {
+            width: 8%;
+          }
+          &:nth-of-type(3) {
+            margin-left: 20px;
+          }
+          &:last-of-type {
+            margin-left: -20px;
+          }
+        }
+      }
+    }
     #latest-tech {
+      padding: 73px 0 30px;
       .back-desk {
         height: 100%;
         position: absolute;
@@ -711,8 +759,17 @@
         letter-spacing: -0.4px;
       }
     }
+    .experts {
+      padding: 31px 0 28px;
+    }
+    #lifestyle {
+      padding: 20px 0 29px;
+    }
+    .risk {
+      padding: 30px 0 28px;
+    }
     .medical-experts {
-      padding: 24px 0 50px;
+      padding: 28px 0 28px;
       h2 {
         letter-spacing: 0.1px;
       }
@@ -720,7 +777,7 @@
         margin-bottom: 30px;
       }
       .swiper {
-        padding-bottom: 33px;
+        padding-bottom: 25px;
       }
       .swiper-slide {
         width: 405px;
@@ -734,7 +791,7 @@
           display: block;
         }
         .bottom {
-          padding: 21px;
+          padding: 24px;
         }
         h3 {
           font-size: 32px;
@@ -750,8 +807,8 @@
       }
     }
     .discount {
+      padding: 28px 0 70px;
       text-align: start;
-      margin-bottom: 70px;
       .container {
         padding: 0 20px;
       }
@@ -808,57 +865,7 @@
         }
       }
       button {
-        background: $light-btn-gradient;
         color: $text-color;
-      }
-    }
-    .age-bracket {
-      .content {
-        padding: 39px 41px 37px;
-      }
-      .increase {
-        margin: -9px 0 7px;
-      }
-      .true-age {
-        width: 25px;
-        height: 25px;
-        border-width: 5px;
-        top: 42%;
-        right: calc(29% + 15px);
-        div {
-          &::before {
-            top: -41px;
-          }
-          &::after {
-            font-size: 18px;
-            top: -91px;
-          }
-        }
-      }
-      .age {
-        &:first-of-type {
-          left: 4%;
-        }
-        &:nth-of-type(2) {
-          left: 29%;
-        }
-      }
-      .desc {
-        padding: 0;
-        text-align: center;
-        gap: 16%;
-        p {
-          width: 11%;
-          &:first-of-type {
-            width: 8%;
-          }
-          &:nth-of-type(3) {
-            margin-left: 20px;
-          }
-          &:last-of-type {
-            margin-left: -20px;
-          }
-        }
       }
     }
   }
@@ -867,7 +874,6 @@
 @media (min-width: 1024px) {
   .sexual-health {
     .meet {
-      padding: 0 0 58px;
       .meet-video {
         width: 48%;
       }
@@ -877,6 +883,13 @@
       }
       .top {
         padding: 25px 0;
+        .meet-close-btn {
+          top: 21px;
+          right: 25px;
+        }
+        p {
+          font-size: 16px;
+        }
       }
       .bottom {
         min-height: 460px;
@@ -893,10 +906,6 @@
       }
     }
     #results {
-      padding: 69px 0 20px;
-      h2 {
-        margin-bottom: 25px;
-      }
       h4 {
         font-size: 18px;
       }
@@ -924,7 +933,7 @@
         margin-bottom: 33px;
       }
       ul {
-        margin-bottom: 35px;
+        margin-bottom: 31px;
       }
       button {
         background: $light-btn-gradient;
@@ -932,9 +941,8 @@
       }
     }
     .experts {
-      padding: 60px 0 25px;
       .swiper {
-        padding-bottom: 30px;
+        padding-bottom: 26px;
       }
       .swiper-slide {
         max-width: 404px;
@@ -951,11 +959,11 @@
       }
     }
     .risk {
-      .swiper-top {
+      .slider-top {
         margin-bottom: 27px;
       }
       .swiper {
-        padding-bottom: 30px;
+        padding-bottom: 26px;
       }
       .swiper-slide {
         img {
@@ -965,6 +973,14 @@
         h3 {
           margin-bottom: 25px;
         }
+      }
+    }
+    #lifestyle {
+      padding: 27px 0 30px;
+    }
+    .discount {
+      button {
+        background: $light-btn-gradient;
       }
     }
   }
@@ -985,7 +1001,6 @@
       }
     }
     #lifestyle {
-      padding: 27px 0 30px;
       li {
         width: 23%;
         padding: 25px 20px;

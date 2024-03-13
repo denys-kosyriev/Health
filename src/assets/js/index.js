@@ -73,6 +73,10 @@ document.addEventListener("DOMContentLoaded", function () {
         spaceBetween: 16,
       },
     },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
   });
 
   // // Work swiper-risk
@@ -95,6 +99,10 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: "4",
       },
     },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
   });
 
   // Work swiper-medical-experts
@@ -106,6 +114,10 @@ document.addEventListener("DOMContentLoaded", function () {
       1024: {
         spaceBetween: 16,
       },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
   });
 

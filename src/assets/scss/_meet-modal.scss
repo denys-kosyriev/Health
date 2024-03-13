@@ -18,7 +18,7 @@
     visibility 0.4s linear,
     opacity 0.4s linear;
   .container {
-    max-width: 560px;
+    max-width: 595px;
   }
   .meet-modal-content {
     margin: 85px 0 20px;
@@ -40,15 +40,15 @@
   }
   .bottom {
     background: #fff;
-    padding: 23px 15px 20px;
+    padding: 23px 15px 29px;
   }
   button {
     width: 96%;
     margin: 0 auto 16px;
-    background: $btn-gradient-mobile;
   }
   .meet-comment {
     align-items: center;
+    padding: 10px 23px;
   }
 }
 
@@ -56,9 +56,28 @@
   .meet-modal {
     .meet-modal-content {
       margin: 100px 0 40px;
+      border-radius: 24px;
+    }
+    .meet-video {
+      .text {
+        bottom: 25px;
+      }
+    }
+    .bottom {
+      padding: 30px 15px 27px;
     }
     button {
+      width: 91%;
       background: $btn-gradient-desktop;
+      padding: 16px 20px;
+      margin: 0 auto 29px;
+    }
+    .meet-comment {
+      margin: 0 21px;
+      padding: 25px 23px;
+      img {
+        width: 46px;
+      }
     }
   }
 }
