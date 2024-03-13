@@ -91,6 +91,9 @@ document.addEventListener("DOMContentLoaded", function () {
       1024: {
         slidesPerView: "3",
       },
+      2000: {
+        slidesPerView: "4",
+      },
     },
   });
 
