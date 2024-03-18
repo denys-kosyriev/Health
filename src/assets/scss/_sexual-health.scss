@@ -7,8 +7,6 @@
         transform: rotate(90deg);
       }
     }
-    #experts {
-    }
     #lifestyle {
       li:hover {
         background: rgba(249, 249, 249, 0.1);
@@ -603,6 +601,9 @@
       }
     }
     #latest-tech {
+      .container {
+        padding: 0 15px;
+      }
       .back-mob {
         display: none;
       }

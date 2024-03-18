@@ -38,13 +38,12 @@
   padding: 0;
 }
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 html,
 body {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 body {
   display: flex;
@@ -77,6 +76,7 @@ main {
 }
 section {
   position: relative;
+  overflow: hidden;
 }
 a {
   color: $text-color;
